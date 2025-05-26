@@ -1,0 +1,45 @@
+{
+  "compilerOptions": {
+    /* Basic Options */
+    "target": "ES2022", // Target latest ECMAScript features supported by your Node.js runtime.  ES2022 is a good, modern choice.
+    "module": "NodeNext", // Use Node.js module resolution.  Crucially important for `type: "module"`.
+    "moduleResolution": "NodeNext", //  Modern and correct module resolution strategy
+    "lib": ["ES2022", "DOM"], // Include necessary library definitions.  "DOM" is included in case any dependencies use browser-like APIs (unlikely, but safe).
+    "outDir": "build", // Output directory for compiled JavaScript.
+    "rootDir": "src", //  Specify the root directory of your source code.
+    "sourceMap": true, // Generate source maps for debugging in production.
+    "declaration": true, // Generate declaration files (.d.ts) for your project.  Useful if you ever publish this as a library.
+    "declarationMap": true, // Generate sourcemap files for the types to improve debugging experience
+
+    /* Strict Type-Checking Options */
+    "strict": true, // Enable all strict type-checking options.  This is HIGHLY recommended.
+    "noImplicitAny": true, // Error on implicitly typed `any`.
+    "strictNullChecks": true, // Treat `null` and `undefined` as distinct types.
+    "strictFunctionTypes": true, // Stricter checks on function parameter types.
+    "strictBindCallApply": true, // Stricter checks on `bind`, `call`, and `apply`.
+    "strictPropertyInitialization": true, // Ensure class properties are initialized.
+    "noImplicitThis": true, // Error when `this` is used with an implicit `any` type.
+    "useUnknownInCatchVariables": true, // Use `unknown` instead of `any` in catch clauses (safer).
+    "alwaysStrict": true, // Always parse in strict mode and emit `"use strict"` for each file.
+
+    /* Module Resolution Options */
+    "esModuleInterop": true, // Enables compatibility with CommonJS modules (important for some of your dependencies).
+    "resolveJsonModule": true, // Allow importing JSON files.
+    "skipLibCheck": true, // Skip type checking of declaration files.  Speeds up compilation *significantly*.
+
+    /* Experimental Options */
+    "experimentalDecorators": true, // Enable experimental support for decorators (if you use them, e.g., with Fastify).
+
+    /* Advanced Options */
+    "forceConsistentCasingInFileNames": true, // Ensure consistent file casing (important for cross-platform development).
+    "noFallthroughCasesInSwitch": true, // Prevent accidental fallthrough in switch statements.
+    "noUnusedLocals": true, // Report errors on unused local variables.
+    "noUnusedParameters": true, // Report errors on unused function parameters.
+    "noImplicitReturns": true, // Ensure all code paths in a function return a value.
+    "noEmitOnError": true, // Do not emit output if any errors were reported. Prevents broken code from being deployed.
+    "allowUnreachableCode": false, // Disallow unreachable code.
+    "allowUnusedLabels": false
+  },
+  "include": ["src/**/*"], // Include all files in the `src` directory.
+  "exclude": ["node_modules", "build"] // Exclude `node_modules` and the output directory.  VERY important!
+}
