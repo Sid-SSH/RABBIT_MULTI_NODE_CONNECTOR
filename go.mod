@@ -1,4 +1,4 @@
-module github.com/sid/rabbitTEST
+module github.com/Sid-SSH/RABBIT_MULTI_NODE_CONNECTOR/tree/master/src/
 
 go 1.21
 
